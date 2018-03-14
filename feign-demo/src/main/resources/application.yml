@@ -1,0 +1,33 @@
+server:
+  port: ${port:8763}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: feign-demo
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/freemaker?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+  #jpa:
+    #database: mysql
+   # show-sql: true
+    #hibernate:
+     # ddl-auto: update
+   # properties:
+     # hibernate:
+       # dialect: org.hibernate.dialect.MySQL5Dialect
+  rabbitmq:
+    host: 192.168.0.128
+    port: 5672
+    username: cui
+    password: cui
+
+
